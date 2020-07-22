@@ -1,0 +1,110 @@
+@import "_common-style";
+@import "_menu-mobile";
+
+
+
+.wrapper {}
+
+.conteiner {
+    max-width: 1300px;
+    height: 10px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+
+
+.first-screen {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% 10%;
+    padding: 30px 0;
+
+    @media screen and (max-width: 1500px) {
+        background-position: 60% 10%;
+    }
+
+    &__body {}
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo-wrapp {}
+
+    &__logo-tittle {
+        font-family: $font-one;
+        // font-size: 32px;
+        font-size: 45px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #f1cdb3;
+    }
+
+    &__logo-subtittle {
+        font-family: $font-two-normal;
+        // font-size: 13px;
+        font-size: 20px;
+        line-height: 29px;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        color: #ffffff;
+    }
+
+    &__nav-wrapp {}
+
+    &__nav-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav-item {
+        margin-right: 40px;
+    }
+
+    &__nav-item:last-child {
+        margin-right: 0;
+    }
+
+
+    &__nav-link {
+        position: relative;
+        font-size: 24px;
+        font-family: $font-two-normal;
+        // font-size: 15px;
+        line-height: 29px;
+        font-weight: 400;
+        color: #cdcdcd;
+
+        &::after {
+            display: block;
+            position: absolute;
+            left: 0;
+            /*изменить на right:0;, чтобы изменить направление подчёркивания */
+            width: 0;
+            /*задаём длинну линии до наведения курсора*/
+            height: 2px;
+            /*задаём ширину линии*/
+            background-color: #f1cdb3;
+            /*задаём цвет линии*/
+            content: "";
+            transition: width 0.3s ease-out;
+            /*задаём время анимации*/
+
+        }
+    }
+
+}
+
+a:hover:after,
+a:focus:after {
+    width: 100%;
+    /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
