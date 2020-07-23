@@ -36,25 +36,43 @@
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (max-width: 750px) {
+        display: none;
+    }
+
     &__logo-wrapp {}
 
     &__logo-tittle {
         font-family: $font-one;
-        // font-size: 32px;
         font-size: 45px;
         font-weight: 400;
         letter-spacing: 0.06em;
         color: #f1cdb3;
+
+        @media screen and (max-width: 1400px) {
+            font-size: 30px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            font-size: 27px;
+        }
     }
 
     &__logo-subtittle {
         font-family: $font-two-normal;
-        // font-size: 13px;
         font-size: 20px;
         line-height: 29px;
         font-weight: 400;
         letter-spacing: 0.1em;
         color: #ffffff;
+
+        @media screen and (max-width: 1400px) {
+            font-size: 13px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            font-size: 12px;
+        }
     }
 
     &__nav-wrapp {}
@@ -76,28 +94,29 @@
 
     &__nav-link {
         position: relative;
-        font-size: 24px;
+        font-size: 20px;
         font-family: $font-two-normal;
-        // font-size: 15px;
         line-height: 29px;
         font-weight: 400;
         color: #cdcdcd;
+
+        @media screen and (max-width: 1400px) {
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            font-size: 15px;
+        }
 
         &::after {
             display: block;
             position: absolute;
             left: 0;
-            /*изменить на right:0;, чтобы изменить направление подчёркивания */
             width: 0;
-            /*задаём длинну линии до наведения курсора*/
             height: 2px;
-            /*задаём ширину линии*/
             background-color: #f1cdb3;
-            /*задаём цвет линии*/
             content: "";
             transition: width 0.3s ease-out;
-            /*задаём время анимации*/
-
         }
     }
 
@@ -106,5 +125,4 @@
 a:hover:after,
 a:focus:after {
     width: 100%;
-    /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
 }

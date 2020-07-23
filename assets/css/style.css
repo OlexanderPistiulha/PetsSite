@@ -50,177 +50,108 @@ ul {
   /* Отступ слева в браузере Firefox, Safari, Chrome */
 }
 
-/* MAIN VARIABLES FOR CUSTOMIZATION */
-/* -------------------------------- */
-.nav {
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: none;
-  overflow: hidden;
-  background: #f1cdb3;
-  border-radius: 5px;
-  -webkit-transform: translate3d(-50%, 0, 0);
-          transform: translate3d(-50%, 0, 0);
-  -webkit-box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
 }
 
-.nav__cb {
-  z-index: -1000;
+@media screen and (max-width: 750px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.mobile__icon {
+  width: 33px;
+  height: 18px;
+  position: relative;
+  z-index: 1000;
+  top: 29px;
+  left: 29px;
+  cursor: pointer;
+  -webkit-transition: left 0.2s ease-in;
+  transition: left 0.2s ease-in;
+}
+
+.mobile__icon::before {
+  content: "";
+  display: block;
+  width: 33px;
+  height: 3px;
   position: absolute;
   left: 0;
   top: 0;
-  opacity: 0;
-  pointer-events: none;
+  z-index: 1100;
+  background-color: #f1cdb3;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
-.nav__content {
-  position: relative;
-  width: 70px;
-  height: 100%;
-  -webkit-transition: width 1s cubic-bezier(0.49, -0.3, 0.68, 1.23);
-  transition: width 1s cubic-bezier(0.49, -0.3, 0.68, 1.23);
-}
-
-.nav__cb:checked ~ .nav__content {
-  -webkit-transition: width 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
-  transition: width 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
-  width: 390px;
-}
-
-.nav__items {
-  position: relative;
-  width: 390px;
-  height: 100%;
-  padding-left: 20px;
-  padding-right: 90px;
-  list-style-type: none;
-  font-size: 0;
-}
-
-.nav__item {
-  display: inline-block;
-  vertical-align: top;
-  width: 70px;
-  text-align: center;
-  color: #6C7784;
-  font-size: 14px;
-  line-height: 70px;
-  font-family: "ArialMTRegula";
-  font-weight: bold;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-  cursor: pointer;
-}
-
-.nav__item:hover {
-  color: #392c25;
-}
-
-.nav__item-text {
-  display: block;
-  height: 100%;
-  -webkit-transform: rotateY(-70deg);
-          transform: rotateY(-70deg);
-  opacity: 0;
-  color: #392c25;
-  -webkit-transition: opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
-  transition: opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
-  transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.7s;
-  transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.7s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
-}
-
-.nav__cb:checked ~ .nav__content .nav__item-text {
-  -webkit-transform: rotateY(0);
-          transform: rotateY(0);
-  opacity: 1;
-  -webkit-transition: opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
-  transition: opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
-  transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.2s;
-  transition: transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5), opacity 0.2s, -webkit-transform 0.7s cubic-bezier(0.48, 0.43, 0.7, 2.5);
-}
-
-.nav__item:nth-child(1) .nav__item-text {
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
-}
-
-.nav__cb:checked ~ .nav__content .nav__item:nth-child(1) .nav__item-text {
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-}
-
-.nav__item:nth-child(2) .nav__item-text {
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-}
-
-.nav__cb:checked ~ .nav__content .nav__item:nth-child(2) .nav__item-text {
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
-}
-
-.nav__item:nth-child(3) .nav__item-text {
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
-}
-
-.nav__cb:checked ~ .nav__content .nav__item:nth-child(3) .nav__item-text {
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-}
-
-.nav__item:nth-child(4) .nav__item-text {
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-}
-
-.nav__cb:checked ~ .nav__content .nav__item:nth-child(4) .nav__item-text {
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
-}
-
-.nav__btn {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 70px;
-  height: 70px;
-  padding: 26px 21px;
-  cursor: pointer;
-}
-
-.nav__btn:before, .nav__btn:after {
+.mobile__icon::after {
   content: "";
   display: block;
-  width: 28px;
-  height: 4px;
-  border-radius: 2px;
-  background: #392c25;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transition: background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
-  transition: background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
-  transition: transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3), background-color 0.3s;
-  transition: transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3), background-color 0.3s, -webkit-transform 1s cubic-bezier(0.48, 0.43, 0.29, 1.3);
+  width: 33px;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1100;
+  background-color: #f1cdb3;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
-.nav__btn:before {
-  margin-bottom: 10px;
+.mobile__icon-active::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 50%;
 }
 
-.nav__btn:hover:before, .nav__btn:hover:after {
-  background: #392c25;
+.mobile__icon-active::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 50%;
 }
 
-.nav__cb:checked ~ .nav__btn:before {
-  -webkit-transform: translateY(7px) rotate(-225deg);
-          transform: translateY(7px) rotate(-225deg);
+.mobile__body {
+  position: absolute;
+  top: 0;
+  left: -310px;
+  width: 300px;
+  height: 100vh;
+  background: linear-gradient(45deg, #392c25, #221e1f);
+  -webkit-box-shadow: 0px 0px 53px -20px #392c25;
+          box-shadow: 0px 0px 53px -20px #392c25;
+  /* Параметры тени */
+  -webkit-transition: left 0.2s ease-in;
+  transition: left 0.2s ease-in;
 }
 
-.nav__cb:checked ~ .nav__btn:after {
-  -webkit-transform: translateY(-7px) rotate(225deg);
-          transform: translateY(-7px) rotate(225deg);
+.mobile__body-active {
+  left: 0;
+}
+
+.mobile__logo {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mobile__nav-list {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mobile__nav-link {
+  position: relative;
+  font-size: 15px;
+  font-family: "ArialMTRegula";
+  line-height: 29px;
+  font-weight: 400;
+  color: #cdcdcd;
 }
 
 .conteiner {
@@ -262,12 +193,30 @@ ul {
           align-items: center;
 }
 
+@media screen and (max-width: 750px) {
+  .header {
+    display: none;
+  }
+}
+
 .header__logo-tittle {
   font-family: "Georgia";
   font-size: 45px;
   font-weight: 400;
   letter-spacing: 0.06em;
   color: #f1cdb3;
+}
+
+@media screen and (max-width: 1400px) {
+  .header__logo-tittle {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header__logo-tittle {
+    font-size: 27px;
+  }
 }
 
 .header__logo-subtittle {
@@ -277,6 +226,18 @@ ul {
   font-weight: 400;
   letter-spacing: 0.1em;
   color: #ffffff;
+}
+
+@media screen and (max-width: 1400px) {
+  .header__logo-subtittle {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header__logo-subtittle {
+    font-size: 12px;
+  }
 }
 
 .header__nav-list {
@@ -304,33 +265,39 @@ ul {
 
 .header__nav-link {
   position: relative;
-  font-size: 24px;
+  font-size: 20px;
   font-family: "ArialMTRegula";
   line-height: 29px;
   font-weight: 400;
   color: #cdcdcd;
 }
 
+@media screen and (max-width: 1400px) {
+  .header__nav-link {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header__nav-link {
+    font-size: 15px;
+  }
+}
+
 .header__nav-link::after {
   display: block;
   position: absolute;
   left: 0;
-  /*изменить на right:0;, чтобы изменить направление подчёркивания */
   width: 0;
-  /*задаём длинну линии до наведения курсора*/
   height: 2px;
-  /*задаём ширину линии*/
   background-color: #f1cdb3;
-  /*задаём цвет линии*/
   content: "";
   -webkit-transition: width 0.3s ease-out;
   transition: width 0.3s ease-out;
-  /*задаём время анимации*/
 }
 
 a:hover:after,
 a:focus:after {
   width: 100%;
-  /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
 }
 /*# sourceMappingURL=style.css.map */
