@@ -58,14 +58,18 @@
     }
 
     &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         top: 0;
-        left: -310px;
-        width: 300px;
+        left: -330px;
+        width: 320px;
         height: 100vh;
         background: linear-gradient(45deg, $bg-color, rgb(34, 30, 31));
+        opacity: 0.96;
         box-shadow: 0px 0px 53px -20px $bg-color;
-        /* Параметры тени */
         transition: left 0.2s ease-in;
     }
 
@@ -74,22 +78,24 @@
     }
 
 
-    &__logo{
+    &__logo {
         width: 70%;
         margin: 0 auto;
+        margin-bottom: 53px;
         text-align: center;
-        
     }
 
     &__nav-wrapp {}
 
     &__nav-list {
-        width: 70%;
+        width: 100%;
         margin: 0 auto;
         text-align: center;
     }
 
-    &__nav-item {}
+    &__nav-item {
+        margin-bottom: 12px;
+    }
 
     &__nav-link {
         position: relative;
