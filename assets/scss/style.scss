@@ -9,7 +9,6 @@
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 50px;
-    position: relative;
 
     @media screen and (max-width: 500px) {
         padding: 0 10px;
@@ -76,11 +75,15 @@
 
     &__subtittle {
         font-family: $font-two-normal;
-        font-size: $font-size-text;
+        font-size: $font-size-text-1920px;
         line-height: 24px;
         font-weight: 400;
         color: #cdcdcd;
         margin-bottom: 45px;
+
+        @media screen and (max-width: 1400px) {
+            font-size: $font-size-text;
+        }
     }
 
     &__button {
@@ -199,4 +202,83 @@
 a:hover:after,
 a:focus:after {
     width: 100%;
+}
+
+
+// --------------------------------------------aboout--------------------------------------------
+
+
+
+.about {
+    padding: 89px 0;
+    background-color: rgb(252, 252, 252);
+
+    &__body {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+        }
+    }
+
+    &__img-wrapp {
+        margin-right: 120px;
+
+        @media screen and (max-width: 1000px) {
+            margin-right: 60px;
+        }
+
+        @media screen and (max-width: 700px) {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__img {
+        width: 300px;
+        height: 400px;
+
+        @media screen and (max-width: 1000px) {
+            width: 200px;
+            height: 300px;
+        }
+    }
+
+    &__content-wrapp {
+        width: 411px;
+
+        @media screen and (max-width: 700px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__tittle {
+        font-family: $font-one;
+        font-size: $font-size-1900-h2;
+        line-height: 45px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #545454;
+        margin-bottom: 37px;
+
+        @media screen and (max-width: 700px) {
+           margin-bottom: 15px;
+        }
+    }
+
+    &__text {
+        font-family: $font-two-normal;
+        font-size: $font-size-text-1920px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #4c4c4c;
+
+        @media screen and (max-width: 1400px) {
+            font-size: $font-size-text;
+        }
+    }
 }
