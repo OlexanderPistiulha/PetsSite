@@ -7,16 +7,19 @@
 
 .conteiner {
     max-width: 1300px;
-    height: 10px;
     margin: 0 auto;
     padding: 0 50px;
+    position: relative;
+
+    @media screen and (max-width: 500px) {
+        padding: 0 10px;
+    }
 }
 
 
 
 .first-screen {
-    width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,11 +30,82 @@
         background-position: 60% 10%;
     }
 
-    &__body {}
+    @media screen and (max-width: 1000px) {
+        background-position: 40% 10%;
+    }
+
+    @media screen and (max-width: 760px) {
+        background-position: 30% 10%;
+    }
+
+
+
+    &__body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    &__tittle-wrapp {
+        margin-top: 20vh;
+        width: 446px;
+
+        @media screen and (max-width: 750px) {
+            text-align: center;
+            width: 90%;
+            margin: 20vh auto;
+        }
+
+        @media screen and (max-width: 400px) {
+            text-align: center;
+            width: 100%;
+            margin: 20vh auto;
+        }
+    }
+
+    &__tittle {
+        font-family: $font-one;
+        font-size: $font-size-1900-h1;
+        line-height: 57px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #ffffff;
+        margin-bottom: 45px;
+    }
+
+    &__subtittle {
+        font-family: $font-two-normal;
+        font-size: $font-size-text;
+        line-height: 24px;
+        font-weight: 400;
+        color: #cdcdcd;
+        margin-bottom: 45px;
+    }
+
+    &__button {
+        width: 205px;
+        text-align: center;
+        padding: 21px 0;
+        background-color: $primary-color;
+        border-radius: 26px;
+        cursor: pointer;
+
+        @media screen and (max-width: 750px) {
+            margin: 0 auto;
+        }
+    }
+
+    &__button-link {
+        font-family: $font-one;
+        font-size: $font-size-button;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #292929;
+    }
 }
 
 .header {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;

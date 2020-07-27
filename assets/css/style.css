@@ -22,6 +22,7 @@
 
 body,
 html {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -178,14 +179,19 @@ ul {
 
 .conteiner {
   max-width: 1300px;
-  height: 10px;
   margin: 0 auto;
   padding: 0 50px;
+  position: relative;
+}
+
+@media screen and (max-width: 500px) {
+  .conteiner {
+    padding: 0 10px;
+  }
 }
 
 .first-screen {
-  width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -199,8 +205,99 @@ ul {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .first-screen {
+    background-position: 40% 10%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .first-screen {
+    background-position: 30% 10%;
+  }
+}
+
+.first-screen__body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.first-screen__tittle-wrapp {
+  margin-top: 20vh;
+  width: 446px;
+}
+
+@media screen and (max-width: 750px) {
+  .first-screen__tittle-wrapp {
+    text-align: center;
+    width: 90%;
+    margin: 20vh auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .first-screen__tittle-wrapp {
+    text-align: center;
+    width: 100%;
+    margin: 20vh auto;
+  }
+}
+
+.first-screen__tittle {
+  font-family: "Georgia";
+  font-size: 45px;
+  line-height: 57px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  margin-bottom: 45px;
+}
+
+.first-screen__subtittle {
+  font-family: "ArialMTRegula";
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #cdcdcd;
+  margin-bottom: 45px;
+}
+
+.first-screen__button {
+  width: 205px;
+  text-align: center;
+  padding: 21px 0;
+  background-color: #f1cdb3;
+  border-radius: 26px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .first-screen__button {
+    margin: 0 auto;
+  }
+}
+
+.first-screen__button-link {
+  font-family: "Georgia";
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+
 .header {
-  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

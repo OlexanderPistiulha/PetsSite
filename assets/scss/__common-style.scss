@@ -24,17 +24,18 @@ $font-two-normal: 'ArialMTRegula';
 $font-two-italic: 'ArialMTRegulaItalic';
 
 $primary-color: rgb(241, 205, 179);
-$bg-color: rgb(57,44,37);
+$bg-color: rgb(57, 44, 37);
 
 $font-size-1900-h1: 45px;
 $font-size-1900-h2: 35px;
 
-$font-size-bottun: 15px;
+$font-size-button: 17px;
 
-$font-size-1300-text: 15px;
+$font-size-text: 15px;
 
 body,
 html {
+    height: 100%;
     margin: 0;
     padding: 0;
     // overflow: hidden;
