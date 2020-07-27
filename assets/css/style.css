@@ -556,7 +556,7 @@ a:focus:after {
 }
 
 .help__icons-wrapp {
-  width: 75%;
+  width: 84%;
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -603,6 +603,181 @@ a:focus:after {
 @media screen and (max-width: 1000px) {
   .help__description {
     font-size: 18px;
+  }
+}
+
+.donation {
+  padding: 89px 0;
+  background-color: #f6f6f6;
+}
+
+.donation__body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .donation__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.donation__img-wrapp {
+  margin-right: 76px;
+}
+
+@media screen and (max-width: 1050px) {
+  .donation__img-wrapp {
+    margin-right: 27px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .donation__img-wrapp {
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+}
+
+.donation__img {
+  width: 500px;
+  height: 260px;
+}
+
+@media screen and (max-width: 1050px) {
+  .donation__img {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .donation__img {
+    width: 340px;
+    height: 170px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .donation__img {
+    width: 281px;
+    height: 149px;
+  }
+}
+
+.donation__content {
+  width: 371px;
+}
+
+@media screen and (max-width: 900px) {
+  .donation__content {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.donation__tittle {
+  font-family: "Georgia";
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  .donation__break {
+    display: none;
+  }
+}
+
+.donation__bank-name {
+  font-family: "Georgia";
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin-bottom: 13px;
+}
+
+@media screen and (max-width: 1400px) {
+  .donation__bank-name {
+    font-size: 15px;
+  }
+}
+
+.donation__card-wrapp {
+  padding: 14px;
+  width: 319px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f1cdb3;
+  border-radius: 9px;
+  margin-bottom: 33px;
+}
+
+@media screen and (max-width: 900px) {
+  .donation__card-wrapp {
+    margin: 0 auto 33px auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .donation__card-wrapp {
+    width: 290px;
+  }
+}
+
+.donation__card-img {
+  width: 30px;
+  height: 24px;
+}
+
+.donation__card-number {
+  font-family: "ArialMTRegula";
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+
+.donation__text {
+  font-family: "ArialMTRegula";
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #b2b2b2;
+}
+
+@media screen and (max-width: 1400px) {
+  .donation__text {
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -315,7 +315,7 @@ a:focus:after {
     }
 
     &__icons-wrapp {
-        width: 75%;
+        width: 84%;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -327,7 +327,7 @@ a:focus:after {
         }
     }
 
-    &__icon {      
+    &__icon {
         width: 170px;
         margin-bottom: 80px;
     }
@@ -347,6 +347,148 @@ a:focus:after {
 
         @media screen and (max-width: 1000px) {
             font-size: 18px;
+        }
+    }
+}
+
+
+//  --------------------------donations screen--------------------------
+
+.donation {
+    padding: 89px 0;
+    background-color: rgb(246, 246, 246);
+
+    &__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+        }
+    }
+
+    &__img-wrapp {
+        margin-right: 76px;
+
+        @media screen and (max-width: 1050px) {
+            margin-right: 27px;
+        }
+
+        @media screen and (max-width: 900px) {
+            margin-right: 0px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__img {
+        width: 500px;
+        height: 260px;
+
+        @media screen and (max-width: 1050px) {
+            width: 400px;
+            height: 200px;
+        }
+
+        @media screen and (max-width: 900px) {
+            width: 340px;
+            height: 170px;
+        }
+
+        @media screen and (max-width: 400px) {
+            width: 281px;
+            height: 149px;
+        }
+    }
+
+    &__content {
+        width: 371px;
+
+        @media screen and (max-width: 900px) {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+
+    &__tittle {
+        font-family: $font-one;
+        font-size: $font-size-1900-h2;
+        line-height: 45px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #545454;
+        margin-bottom: 15px;
+    }
+
+    &__break {
+
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
+    }
+
+    &__bank-name {
+        font-family: $font-one;
+        font-size: $font-size-text-1920px;
+        line-height: 1.2;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #545454;
+        margin-bottom: 13px;
+
+        @media screen and (max-width: 1400px) {
+            font-size: $font-size-text;
+        }
+    }
+
+    &__card-wrapp {
+        padding: 14px;
+        width: 319px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f1cdb3;
+        border-radius: 9px;
+        margin-bottom: 33px;
+
+        @media screen and (max-width: 900px) {
+            margin: 0 auto 33px auto;
+        }
+
+        @media screen and (max-width: 400px) {
+            width: 290px;
+        }
+
+    }
+
+    &__card-img {
+        width: 30px;
+        height: 24px;
+    }
+
+    &__card-number {
+        font-family: $font-two-normal;
+        font-size: $font-size-text-1920px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #292929;
+
+        // @media screen and (max-width: 1400px) {
+        //     font-size: $font-size-text;
+        // }
+    }
+
+    &__text {
+        font-family: $font-two-normal;
+        font-size: $font-size-text-1920px;
+        line-height: 18px;
+        font-weight: 400;
+        // font-style: italic;
+        color: #b2b2b2;
+
+        @media screen and (max-width: 1400px) {
+            font-size: $font-size-text;
         }
     }
 }
