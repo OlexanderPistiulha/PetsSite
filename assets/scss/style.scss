@@ -487,8 +487,102 @@ a:focus:after {
         // font-style: italic;
         color: #b2b2b2;
 
+
         @media screen and (max-width: 1400px) {
             font-size: $font-size-text;
         }
+    }
+}
+
+
+// ----------------------------------- footer -----------------------------------
+
+
+.footer {
+    padding: 89px 0;
+    background-image: url(../img/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% 10%;
+
+
+    @media screen and (max-width: 1500px) {
+        background-position: 60% 10%;
+    }
+
+    @media screen and (max-width: 1000px) {
+        background-position: 40% 10%;
+    }
+
+    @media screen and (max-width: 760px) {
+        background-position: 30% 10%;
+    }
+
+
+    &__body {
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__column-wrapp {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @media screen and (max-width: 900px) {
+            width: 100%;
+        }
+    }
+
+    &__column-one {
+        margin-right: 175px;
+
+        @media screen and (max-width: 900px) {
+            margin-right: 0;
+        }
+    }
+
+    &__column-two {}
+
+    &__tittle {
+        font-family: $font-one;
+        font-size: $font-size-1900-h2;
+        line-height: 45px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #ffffff;
+        margin-bottom: 40px;
+    }
+
+    &__item-wrapp {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 40px;
+
+
+        @media screen and (max-width: 900px) {
+            justify-content: center;
+        }
+    }
+
+    &__icon {
+        margin-right: 22px;
+    }
+
+    &__text {
+        font-family: $font-two-normal;
+        font-size: 20px;
+        //line-height: 45px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #f1cdb3;
     }
 }
