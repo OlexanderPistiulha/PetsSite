@@ -579,10 +579,12 @@ a:focus:after {
 
     &__text {
         font-family: $font-two-normal;
-        font-size: 20px;
-        //line-height: 45px;
+        font-size: 18px;       
         font-weight: 400;
         letter-spacing: 0.06em;
         color: #f1cdb3;
+        @media screen and (max-width: 1400px) {
+           font-size: $font-size-text;
+        }
     }
 }
