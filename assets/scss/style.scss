@@ -283,6 +283,100 @@ a:focus:after {
     }
 }
 
+//  -----------------------------------------pets screen-----------------------------------------
+
+.pets {
+    padding: 89px 0;
+    background-color: rgb(246, 246, 246);
+
+    &__body {
+        text-align: center;
+    }
+
+    &__tittle {
+        font-family: $font-one;
+        font-size: $font-size-1900-h2;
+        line-height: 45px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #545454;
+        margin-bottom: 66px;
+    }
+
+    &__break {}
+
+    &__buttom-wrapp {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 20px 48px;
+        //width: 267px;
+        background-color: #f1cdb3;
+        border: 2px solid #f1cdb3;
+        border-radius: 26px;
+    }
+
+
+
+    &__button-text {
+        font-family: $font-one;
+        font-size: $font-size-text-1920px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #292929;
+    }
+}
+
+
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 66px;
+
+    &__slide {
+        padding: 40px;
+        background-color: rgb(250, 250, 250);
+        // width: 424px;
+        margin: 0 20px;
+    }
+
+    &__img {
+        //background-color: transparent;
+        width: 270px;
+        height: 270px;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-family: $font-one;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #545454;
+        margin-bottom: 25px;
+    }
+
+    &__button-wrapp {
+        padding: 20px 45px;
+        display: inline-block;
+        border: 2px solid #f1cdb3;
+        border-radius: 26px;
+    }
+
+    &__button-text {
+        font-family: $font-one;
+        font-size: $font-size-text-1920px;
+        // line-height: 57px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #292929;
+    }
+}
+
+
+
+
 //  -----------------------------------------help-screen-----------------------------------------
 
 .help {
@@ -499,7 +593,7 @@ a:focus:after {
 
 
 .footer {
-    padding: 89px 0;
+    padding: 89px 0 49px 0;
     background-image: url(../img/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -579,12 +673,13 @@ a:focus:after {
 
     &__text {
         font-family: $font-two-normal;
-        font-size: 18px;       
+        font-size: 18px;
         font-weight: 400;
         letter-spacing: 0.06em;
         color: #f1cdb3;
+
         @media screen and (max-width: 1400px) {
-           font-size: $font-size-text;
+            font-size: $font-size-text;
         }
     }
 }

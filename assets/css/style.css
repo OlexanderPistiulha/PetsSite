@@ -539,6 +539,94 @@ a:focus:after {
   }
 }
 
+.pets {
+  padding: 89px 0;
+  background-color: #f6f6f6;
+}
+
+.pets__body {
+  text-align: center;
+}
+
+.pets__tittle {
+  font-family: "Georgia";
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin-bottom: 66px;
+}
+
+.pets__buttom-wrapp {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 20px 48px;
+  background-color: #f1cdb3;
+  border: 2px solid #f1cdb3;
+  border-radius: 26px;
+}
+
+.pets__button-text {
+  font-family: "Georgia";
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 66px;
+}
+
+.slider__slide {
+  padding: 40px;
+  background-color: #fafafa;
+  margin: 0 20px;
+}
+
+.slider__img {
+  width: 270px;
+  height: 270px;
+  margin-bottom: 30px;
+}
+
+.slider__text {
+  font-family: "Georgia";
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin-bottom: 25px;
+}
+
+.slider__button-wrapp {
+  padding: 20px 45px;
+  display: inline-block;
+  border: 2px solid #f1cdb3;
+  border-radius: 26px;
+}
+
+.slider__button-text {
+  font-family: "Georgia";
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+
 .help {
   padding: 89px 0 9px 0;
   background-color: #fcfcfc;
@@ -795,7 +883,7 @@ a:focus:after {
 }
 
 .footer {
-  padding: 89px 0;
+  padding: 89px 0 49px 0;
   background-image: url(../img/footer-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
