@@ -266,7 +266,7 @@ a:focus:after {
         margin-bottom: 37px;
 
         @media screen and (max-width: 700px) {
-           margin-bottom: 15px;
+            margin-bottom: 15px;
         }
     }
 
@@ -279,6 +279,74 @@ a:focus:after {
 
         @media screen and (max-width: 1400px) {
             font-size: $font-size-text;
+        }
+    }
+}
+
+//  -----------------------------------------help-screen-----------------------------------------
+
+.help {
+    padding: 89px 0 9px 0;
+    background-color: rgb(252, 252, 252);
+
+    &__body {
+        text-align: center;
+    }
+
+    &__tittle-wrapp {
+        margin: 0 auto;
+    }
+
+    &__tittle {
+        font-family: $font-one;
+        font-size: $font-size-1900-h2;
+        line-height: 45px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #545454;
+        margin-bottom: 80px;
+    }
+
+    &__break {
+
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
+    }
+
+    &__icons-wrapp {
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 1240px) {
+            width: 100%;
+        }
+    }
+
+    &__icon {      
+        width: 170px;
+        margin-bottom: 80px;
+    }
+
+    &__img {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 30px;
+    }
+
+    &__description {
+        font-family: $font-one;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: #545454;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 18px;
         }
     }
 }

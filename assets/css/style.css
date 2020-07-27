@@ -525,4 +525,84 @@ a:focus:after {
     font-size: 15px;
   }
 }
+
+.help {
+  padding: 89px 0 9px 0;
+  background-color: #fcfcfc;
+}
+
+.help__body {
+  text-align: center;
+}
+
+.help__tittle-wrapp {
+  margin: 0 auto;
+}
+
+.help__tittle {
+  font-family: "Georgia";
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 1000px) {
+  .help__break {
+    display: none;
+  }
+}
+
+.help__icons-wrapp {
+  width: 75%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1240px) {
+  .help__icons-wrapp {
+    width: 100%;
+  }
+}
+
+.help__icon {
+  width: 170px;
+  margin-bottom: 80px;
+}
+
+.help__img {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 30px;
+}
+
+.help__description {
+  font-family: "Georgia";
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+@media screen and (max-width: 1000px) {
+  .help__description {
+    font-size: 18px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
