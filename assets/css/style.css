@@ -56,6 +56,7 @@ ul {
   top: 0;
   left: 0;
   display: none;
+  z-index: 3000;
 }
 
 @media screen and (max-width: 500px) {
@@ -74,7 +75,7 @@ ul {
   width: 33px;
   height: 18px;
   position: relative;
-  z-index: 1000;
+  z-index: 4000;
   top: 29px;
   left: 29px;
   cursor: pointer;
@@ -565,6 +566,7 @@ a:focus:after {
   background-color: #f1cdb3;
   border: 2px solid #f1cdb3;
   border-radius: 26px;
+  cursor: pointer;
 }
 
 .pets__button-text {
@@ -573,22 +575,6 @@ a:focus:after {
   font-weight: 400;
   letter-spacing: 0.06em;
   color: #292929;
-}
-
-.slider {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 66px;
 }
 
 .slider__slide {
@@ -601,6 +587,20 @@ a:focus:after {
   width: 270px;
   height: 270px;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1400px) {
+  .slider__img {
+    width: 222px;
+    height: 222px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .slider__img {
+    width: 170px;
+    height: 170px;
+  }
 }
 
 .slider__text {
@@ -617,6 +617,11 @@ a:focus:after {
   display: inline-block;
   border: 2px solid #f1cdb3;
   border-radius: 26px;
+  cursor: pointer;
+}
+
+.slider__button-wrapp :hover {
+  background-color: #f1cdb3;
 }
 
 .slider__button-text {
@@ -625,6 +630,12 @@ a:focus:after {
   font-weight: 400;
   letter-spacing: 0.06em;
   color: #292929;
+}
+
+@media screen and (max-width: 50px) {
+  .slider__button-text {
+    font-size: 15px;
+  }
 }
 
 .help {
