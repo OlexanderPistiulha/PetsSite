@@ -1,6 +1,6 @@
 @import "_common-style";
 @import "_menu-mobile";
-
+@import "_animate-effect";
 
 
 .wrapper {}
@@ -330,9 +330,6 @@ a:focus:after {
 
 
 .slider {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
 
     &__slide {
         padding: 40px;
@@ -367,16 +364,16 @@ a:focus:after {
 
     &__button-wrapp {
         padding: 20px 45px;
-        display: inline-block;
+        display: block;
         border: 2px solid #f1cdb3;
         border-radius: 26px;
         cursor: pointer;
 
-        :hover {
-            background-color: #f1cdb3;
-        }
 
+    }
 
+    &__button-wrapp:hover {
+        background-color: #f1cdb3;
     }
 
     &__button-text {
